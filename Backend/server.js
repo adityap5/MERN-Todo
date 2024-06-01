@@ -2,13 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const todoroute = require('./routes/todoroute');
+const authRoutes = require('./routes/auth');
 
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const todoroute = require('./routes/todoroute');
-const authRoutes = require('./routes/auth');
 mongoose.connect('mongodb://localhost:27017/merntodo');
 
 const db = mongoose.connection;

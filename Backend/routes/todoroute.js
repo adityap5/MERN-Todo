@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Todo = require('../models/todos');
 const auth = require('../middleware/auth');
+
 // Create new todo
 router.post('/',async (req, res) => {
     const { title , body } = req.body;
