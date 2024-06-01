@@ -17,6 +17,7 @@ function TodoForm({ token }) {
       console.log('Todo saved:', response.data);
       setTitle('');
       setBody("");
+      window.location.reload();
     } catch (error) {
       console.error('Error saving todo:', error.message);
     }

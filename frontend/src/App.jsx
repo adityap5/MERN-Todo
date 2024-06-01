@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Display from './pages/Display';
 import HomePage from './pages/HomePage';
 import Navbar from './components/Navbar';
+import ReadMore from './pages/ReadMore';
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem('token'));
@@ -30,6 +31,7 @@ const App = () => {
       <Route path="/login" element={!token ? <Login setToken={handleLogin} /> : <Navigate to="/" />} />
       <Route path="/todos" element={token ? <Display token={token} /> : <Navigate to="/login" />} />
       <Route path="/add-todo" element={token ? <TodoForm token={token} /> : <Navigate to="/login" />} />
+      <Route path="/todos/:id" element={token ? <ReadMore token={token} /> : <Navigate to="/login" />} />
     </Routes>
   </Router>
   );
