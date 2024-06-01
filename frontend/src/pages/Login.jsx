@@ -22,7 +22,7 @@ const Login = ({ setToken }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-10 pt-2">
+    <form onSubmit={handleSubmit} className="grid gap-10 mt-12 p-10 place-items-center">
       <div>
       <label className='mr-2'>Username</label>
         <input
@@ -34,7 +34,7 @@ const Login = ({ setToken }) => {
         />
       </div>
       <div>
-        <label className='mr-2'>Password</label>
+        <label className='mr-3'>Password</label>
         <input
           type="password"
           value={password}
@@ -43,7 +43,7 @@ const Login = ({ setToken }) => {
           className='p-2 rounded-md bg-zinc-800 text-white font-semibold w-18'
         />
       </div>
-      <button type="submit" className=" bg-green-700 p-2 w-20 rounded-lg">Login</button>
+      <button type="submit" className=" bg-green-700 font-semibold p-2 w-20 rounded-lg ml-16">Login</button>
     </form>
   );
 };

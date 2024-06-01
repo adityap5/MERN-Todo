@@ -25,13 +25,13 @@ function Display() {
     if (error) return <p>Error: {error}</p>;
   return (
     
-    <div className="pt-4 flex gap-3 flex-wrap">
+    <div className="p-12 flex gap-3 flex-wrap">
         {todos.map((todo) => (
-  <div key={todo.id} className="w-64 h-24 overflow-hidden bg-slate-700 gap-2 rounded-xl tracking-tighter p-2">
-  <h2>{todo.title}</h2>
-  <p>{todo.body}</p>
+  <div key={todo.id} className="w-64 h-24 truncate bg-slate-700 gap-2 rounded-xl p-4">
+  <h2 className="font-semibold">{todo.title}</h2>
+  <p className="text-gray-300">{todo.body}</p>
   <div className="text-slate-400 cursor-pointer mt-2 flex justify-between text-sm ">
-  <Link to={`/todos/${todo._id}`}>read more</Link>
+  <Link to={`/todos/${todo._id}`} className="place-items-baseline" >read more</Link>
 
   </div>
  </div>
